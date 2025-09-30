@@ -68,6 +68,59 @@ public class HelloController {
     private TextArea txtArea;
 
     @FXML
+    void onBtnNineClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "9");
+    }
+
+    @FXML
+    void onBtnEightClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "8");
+    }
+
+    @FXML
+    void onBtnSevenClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "7");
+    }
+
+    @FXML
+    void onBtnSixClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "6");
+    }
+
+    @FXML
+    void onBtnFiveClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "5");
+    }
+
+    @FXML
+    void onBtnFourClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "4");
+    }
+
+    @FXML
+    void onBtnThreeClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "3");
+    }
+
+    @FXML
+    void onBtnTwoClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "2");
+    }
+
+    @FXML
+    void onBtnOneClick(ActionEvent event) {
+        txtArea.setText(txtArea.getText() + "1");
+    }
+
+    @FXML
+    void onBtnZeroClick(ActionEvent event) {txtArea.setText(txtArea.getText() + "0");}
+
+    @FXML
+    void onBtnDumbClick(ActionEvent event) {
+        txtArea.setText("-"+txtArea.getText());
+    }
+
+    @FXML
     void onBtnCClick(ActionEvent event) {
         txtArea.clear();
         input1 = 0;
@@ -80,6 +133,27 @@ public class HelloController {
     }
 
     @FXML
+    void onBtnPlusClick(ActionEvent event) {
+        operator = "plus";
+        input1 = Double.parseDouble(txtArea.getText());
+        txtArea.clear();
+    }
+
+    @FXML
+    void onBtnMinusClick(ActionEvent event) {
+        operator = "minus";
+        input1 = Double.parseDouble(txtArea.getText());
+        txtArea.clear();
+    }
+
+    @FXML
+    void onBtnMultiplyClick(ActionEvent event) {
+        operator = "multiply";
+        input1 = Double.parseDouble(txtArea.getText());
+        txtArea.clear();
+    }
+
+    @FXML
     void onBtnDivideClick(ActionEvent event) {
         operator = "divide";
         input1 = Double.parseDouble(txtArea.getText());
@@ -87,13 +161,10 @@ public class HelloController {
     }
 
     @FXML
-    void onBtnDumbClick(ActionEvent event) {
-        txtArea.setText("-"+txtArea.getText());
-    }
-
-    @FXML
-    void onBtnEightClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "8");
+    void onBtnModuloClick(ActionEvent event) {
+        operator = "modulo";
+        input1 = Double.parseDouble(txtArea.getText());
+        txtArea.clear();
     }
 
     @FXML
@@ -114,76 +185,5 @@ public class HelloController {
         txtArea.setText(String.valueOf(result));
     }
 
-    @FXML
-    void onBtnFiveClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "5");
-    }
 
-    @FXML
-    void onBtnFourClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "4");
-    }
-
-    @FXML
-    void onBtnMinusClick(ActionEvent event) {
-        operator = "divide";
-        input1 = Double.parseDouble(txtArea.getText());
-        txtArea.clear();
-    }
-
-    @FXML
-    void onBtnModuloClick(ActionEvent event) {
-        operator = "modulo";
-        input1 = Double.parseDouble(txtArea.getText());
-        txtArea.clear();
-    }
-
-    @FXML
-    void onBtnMultiplyClick(ActionEvent event) {
-        operator = "multiply";
-        input1 = Double.parseDouble(txtArea.getText());
-        txtArea.clear();
-    }
-
-    @FXML
-    void onBtnNineClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "9");
-    }
-
-    @FXML
-    void onBtnOneClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "1");
-    }
-
-    @FXML
-    void onBtnPlusClick(ActionEvent event) {
-        operator = "plus";
-        input1 = Double.parseDouble(txtArea.getText());
-        txtArea.clear();
-    }
-
-    @FXML
-    void onBtnSevenClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "7");
-    }
-
-    @FXML
-    void onBtnSixClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "6");
-    }
-
-    @FXML
-    void onBtnThreeClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "3");
-    }
-
-    @FXML
-    void onBtnTwoClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "2");
-    }
-
-    @FXML
-    void onBtnZeroClick(ActionEvent event) {
-        txtArea.setText(txtArea.getText() + "0");
-    }
 }
