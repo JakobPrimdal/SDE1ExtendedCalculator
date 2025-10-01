@@ -117,7 +117,14 @@ public class HelloController {
 
     @FXML
     void onBtnDumbClick(ActionEvent event) {
-        txtArea.setText("-"+txtArea.getText());
+        if (Double.parseDouble(txtArea.getText()) > 0){
+            txtArea.setText("-"+txtArea.getText());
+        }
+        else if (Double.parseDouble(txtArea.getText()) < 0) {
+            String text = txtArea.getText();
+            text = text.replace("-","");
+            txtArea.setText(text);
+        }
     }
 
     @FXML
