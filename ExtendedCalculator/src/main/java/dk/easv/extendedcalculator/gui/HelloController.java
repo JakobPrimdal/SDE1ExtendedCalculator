@@ -1,12 +1,15 @@
 package dk.easv.extendedcalculator.gui;
 
 // Java imports
-import dk.easv.extendedcalculator.be.History;
+import dk.easv.extendedcalculator.be.Result;
+import dk.easv.extendedcalculator.bll.HistoryLogic;
 import dk.easv.extendedcalculator.bll.CalculatorLogic;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+
+import java.util.List;
 
 public class HelloController {
 
@@ -16,7 +19,7 @@ public class HelloController {
     private double result;
 
     private CalculatorLogic calLogic = new CalculatorLogic();
-    private History history = new History();
+    private HistoryLogic historyLogic = new HistoryLogic();
 
     @FXML
     private Button btnDivide;
@@ -194,10 +197,17 @@ public class HelloController {
             result = calLogic.modulo(input1, input2);
         }
 
-        history.addHistory(String.valueOf(input1), operator, String.valueOf(input2), String.valueOf(result));
-        history.printHistory();
+        historyLogic.addHistory(input1, input2, operator, result);
+        printHistory();
 
         txtArea.setText(String.valueOf(result));
+    }
+
+    private void printHistory(){
+        List<Result> resultList = historyLogic.getHistory();
+        for (Result r : resultList){
+            System.out.println(r);
+        }
     }
 
 
