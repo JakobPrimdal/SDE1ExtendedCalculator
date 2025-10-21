@@ -1,6 +1,7 @@
-package dk.easv.extendedcalculator.controllers;
+package dk.easv.extendedcalculator.gui;
 
 // Java imports
+import dk.easv.extendedcalculator.bll.CalculatorLogic;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +13,8 @@ public class HelloController {
     private double input1;
     private double input2;
     private double result;
+
+    private CalculatorLogic calLogic = new CalculatorLogic();
 
     @FXML
     private Button btnDivide;
@@ -178,15 +181,15 @@ public class HelloController {
     void onBtnEqualsClick(ActionEvent event) {
         input2 = Double.parseDouble(txtArea.getText());
         if(operator.equals("divide")){
-            result = input1 / input2;
+            result = calLogic.divide(input1, input2);
         } else if(operator.equals("multiply")){
-            result =  input1 * input2;
+            result = calLogic.multiply(input1, input2);
         } else if(operator.equals("plus")){
-            result =  input1 + input2;
+            result =  calLogic.plus(input1, input2);
         } else if(operator.equals("minus")){
-            result =  input1 - input2;
+            result = calLogic.minus(input1, input2);
         } else if(operator.equals("modulo")){
-            result =  input1 % input2;
+            result = calLogic.modulo(input1, input2);
         }
 
         txtArea.setText(String.valueOf(result));

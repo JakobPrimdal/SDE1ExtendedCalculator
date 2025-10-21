@@ -5,6 +5,8 @@ module dk.easv.extendedcalculator {
 
     opens dk.easv.extendedcalculator to javafx.fxml;
     exports dk.easv.extendedcalculator;
-    exports dk.easv.extendedcalculator.controllers;
-    opens dk.easv.extendedcalculator.controllers to javafx.fxml;
+    //exports dk.easv.extendedcalculator.gui;
+    opens dk.easv.extendedcalculator.gui to javafx.fxml;
+    exports dk.easv.extendedcalculator.bll;
+    opens dk.easv.extendedcalculator.bll to javafx.fxml;
 }
