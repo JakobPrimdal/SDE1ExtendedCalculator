@@ -1,6 +1,7 @@
 package dk.easv.extendedcalculator.gui;
 
 // Java imports
+import dk.easv.extendedcalculator.be.History;
 import dk.easv.extendedcalculator.bll.CalculatorLogic;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ public class HelloController {
     private double result;
 
     private CalculatorLogic calLogic = new CalculatorLogic();
+    private History history = new History();
 
     @FXML
     private Button btnDivide;
@@ -191,6 +193,9 @@ public class HelloController {
         } else if(operator.equals("modulo")){
             result = calLogic.modulo(input1, input2);
         }
+
+        history.addHistory(String.valueOf(input1), operator, String.valueOf(input2), String.valueOf(result));
+        history.printHistory();
 
         txtArea.setText(String.valueOf(result));
     }
