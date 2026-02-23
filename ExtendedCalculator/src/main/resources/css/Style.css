@@ -1,0 +1,24 @@
+.button {
+    -fx-background-radius: 30;
+    -fx-text-fill: #ffffff;
+}
+
+.normalBtns {
+    -fx-background-color: #333333;
+}
+
+.operationBtns {
+    -fx-background-color: #fc9703;
+}
+
+#vbox{
+    -fx-background-color: #000000;
+}
+
+#btnC {
+    -fx-background-color: darkgrey;
+}
+
+#btnEquals {
+    -fx-background-color: #26cb91;
+}

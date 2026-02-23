@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="201.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.extendedcalculator.gui.HelloController">
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="201.0" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.extendedcalculator.gui.HelloController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -28,17 +28,17 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnDumb" mnemonicParsing="false" onAction="#onBtnDumbClick" prefWidth="30.0" text="±">
+            <Button fx:id="btnDumb" mnemonicParsing="false" onAction="#onBtnDumbClick" prefWidth="30.0" styleClass="operationBtns" text="±">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnModulo" mnemonicParsing="false" onAction="#onBtnModuloClick" prefHeight="26.0" prefWidth="30.0" text="\%">
+            <Button fx:id="btnModulo" mnemonicParsing="false" onAction="#onBtnModuloClick" prefHeight="26.0" prefWidth="30.0" styleClass="operationBtns" text="\%">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#onBtnDivideClick" prefWidth="30.0" text="/" />
+            <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#onBtnDivideClick" prefWidth="30.0" styleClass="operationBtns" text="/" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
@@ -46,22 +46,22 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="22.0" prefWidth="222.0">
          <children>
-            <Button fx:id="btnSeven" mnemonicParsing="false" onAction="#onBtnSevenClick" prefWidth="30.0" text="7">
+            <Button fx:id="btnSeven" mnemonicParsing="false" onAction="#onBtnSevenClick" prefWidth="30.0" styleClass="normalBtns" text="7">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnEight" mnemonicParsing="false" onAction="#onBtnEightClick" prefWidth="30.0" text="8">
+            <Button fx:id="btnEight" mnemonicParsing="false" onAction="#onBtnEightClick" prefWidth="30.0" styleClass="normalBtns" text="8">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnNine" mnemonicParsing="false" onAction="#onBtnNineClick" prefHeight="26.0" prefWidth="30.0" text="9">
+            <Button fx:id="btnNine" mnemonicParsing="false" onAction="#onBtnNineClick" prefHeight="26.0" prefWidth="30.0" styleClass="normalBtns" text="9">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#onBtnMultiplyClick" prefWidth="30.0" text="X" />
+            <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#onBtnMultiplyClick" prefWidth="30.0" styleClass="operationBtns" text="X" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
@@ -69,22 +69,22 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="29.0" prefWidth="600.0">
          <children>
-            <Button fx:id="btnFour" mnemonicParsing="false" onAction="#onBtnFourClick" prefWidth="30.0" text="4">
+            <Button fx:id="btnFour" mnemonicParsing="false" onAction="#onBtnFourClick" prefWidth="30.0" styleClass="normalBtns" text="4">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnFive" mnemonicParsing="false" onAction="#onBtnFiveClick" prefWidth="30.0" text="5">
+            <Button fx:id="btnFive" mnemonicParsing="false" onAction="#onBtnFiveClick" prefWidth="30.0" styleClass="normalBtns" text="5">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnSix" mnemonicParsing="false" onAction="#onBtnSixClick" prefWidth="30.0" text="6">
+            <Button fx:id="btnSix" mnemonicParsing="false" onAction="#onBtnSixClick" prefWidth="30.0" styleClass="normalBtns" text="6">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#onBtnMinusClick" prefWidth="30.0" text="-" />
+            <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#onBtnMinusClick" prefWidth="30.0" styleClass="operationBtns" text="-" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
@@ -92,22 +92,22 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="26.0" prefWidth="600.0">
          <children>
-            <Button fx:id="btnOne" mnemonicParsing="false" onAction="#onBtnOneClick" prefWidth="30.0" text="1">
+            <Button fx:id="btnOne" mnemonicParsing="false" onAction="#onBtnOneClick" prefWidth="30.0" styleClass="normalBtns" text="1">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnTwo" mnemonicParsing="false" onAction="#onBtnTwoClick" prefWidth="30.0" text="2">
+            <Button fx:id="btnTwo" mnemonicParsing="false" onAction="#onBtnTwoClick" prefWidth="30.0" styleClass="normalBtns" text="2">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnThree" mnemonicParsing="false" onAction="#onBtnThreeClick" prefWidth="30.0" text="3">
+            <Button fx:id="btnThree" mnemonicParsing="false" onAction="#onBtnThreeClick" prefWidth="30.0" styleClass="normalBtns" text="3">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#onBtnPlusClick" prefWidth="30.0" text="+" />
+            <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#onBtnPlusClick" prefWidth="30.0" styleClass="operationBtns" text="+" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
@@ -115,12 +115,12 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="29.0" prefWidth="600.0">
          <children>
-            <Button fx:id="btnZero" mnemonicParsing="false" onAction="#onBtnZeroClick" prefWidth="30.0" text="0">
+            <Button fx:id="btnZero" mnemonicParsing="false" onAction="#onBtnZeroClick" prefWidth="30.0" styleClass="normalBtns" text="0">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnComma" mnemonicParsing="false" onAction="#onBtnCommaClick" prefWidth="30.0" text=",">
+            <Button fx:id="btnComma" mnemonicParsing="false" onAction="#onBtnCommaClick" prefWidth="30.0" styleClass="normalBtns" text=",">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
