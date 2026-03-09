@@ -8,7 +8,8 @@ public class Result {
     private double result;
 
     public Result(double input1, double input2, String operator, double result){
-        this.input1 = input1;
+        this.input1 = input1;//input
+
         this.input2 = input2;
         this.operator = operator;
         this.result = result;
